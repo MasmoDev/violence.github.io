@@ -1,0 +1,197 @@
+/* Global Modern Styles for All Pages */
+
+/* 1) إعادة ضبط عامة */
+* {
+    box-sizing: border-box;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* 2) إعدادات الـBody العامة */
+  body {
+    display: flex;
+    flex-direction: column; /* لجعل الـFooter يلتصق بالأسفل إذا كان المحتوى قليلاً */
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f8f9fa, #dfe4ea);
+    color: #333;
+    scroll-behavior: smooth;
+  }
+  
+  /* 3) الـHeader */
+  header {
+    background: rgba(255, 255, 255, 0.9);
+    color: #2c3e50;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  
+  /* 4) الـNav داخل الـHeader */
+  header nav {
+    margin: 0 auto;
+    background: none;
+  }
+  
+  header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  header nav ul li {
+    display: inline;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    background: #ecf0f1;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  
+  header nav ul li a:hover {
+    background: #3498db;
+    color: white;
+  }
+  
+  /* 5) محتوى الصفحة الرئيسي */
+  main {
+    flex: 1; /* يتمدد ليملأ الفراغ المتبقي من الصفحة */
+    max-width: 1000px;
+    width: 95%;
+    margin: 80px auto 40px; /* 80px لتجنب التصاق المحتوى بالهيدر */
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* قسم الترحيب في الصفحة الرئيسية */
+  .hero {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* تنسيق الأزرار داخل قسم الترحيب */
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap; /* لتفادي مشاكل العرض على الشاشات الصغيرة */
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* 6) تنسيقات الصور */
+  .responsive-img {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .responsive-img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* 7) القوائم */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    background: #f0f3f4;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  ul li:hover {
+    transform: scale(1.03);
+    background: #d5dbdb;
+  }
+  
+  /* 8) الأزرار العامة */
+  .button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #3498db;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button:hover {
+    background: #2980b9;
+    transform: translateY(-3px);
+  }
+  
+  /* 9) الـFooter */
+  footer {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    color: #2c3e50;
+    padding: 15px 0;
+    font-size: 1rem;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 10) الأنيميشن */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* 11) ميديا كويريز (للشاشات الصغيرة) */
+  @media (max-width: 768px) {
+    header nav ul {
+      flex-direction: column;
+    }
+    header nav ul li a {
+      margin-bottom: 10px;
+    }
+    .hero-buttons {
+      flex-direction: column;
+    }
+    main {
+      margin: 60px auto 20px; /* تقليل الهامش العلوي عند صغر الشاشة */
+    }
+  }
+  
